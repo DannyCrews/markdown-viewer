@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './App.scss';
 import Marked from 'marked';
-
+import './App.scss';
 import MarkdownPane from './MarkdownPane';
 import PreviewPane from './PreviewPane';
 
@@ -10,9 +9,42 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.onMarkdownChange = this.onMarkdownChange.bind(this);
-    this.rawMarkup = this.rawMarkup.bind(this);
+    this.rawMarkup = this.processedMarkdown.bind(this);
     this.state = {
-      markdownText: 'default input'
+      markdownText: `Heading
+=======
+
+Sub-heading
+-----------
+
+### Another deeper heading
+
+Paragraphs are separated
+by a blank line.
+
+Leave 2 spaces at the end of a line to do a
+line break
+
+Text attributes *italic*, **bold**,
+\`monospace\`, ~~strikethrough~~ .
+
+Shopping list:
+
+  * apples
+  * oranges
+  * pears
+
+Numbered list:
+
+  1. apples
+  2. oranges
+  3. pears
+
+The rain---not the reign---in
+Spain.
+
+ *[Herman Fassett](https://freecodecamp.com/hermanfassett)*
+`
     }
   }
 
@@ -23,9 +55,9 @@ class App extends Component {
     });
   }
 
-  rawMarkup() {
-    var raw = this.state.markdownText;
-    return { __html: raw };
+  processedMarkdown() {
+    var processed = Marked(this.state.markdownText, {sanitize: true});
+    return { __html: processed };
   }
 
   render() {
@@ -34,13 +66,15 @@ class App extends Component {
         <div className="title">
           <h1>Markdown Previewer</h1>
         </div>
-        <div className='MarkdownPane'>
-          <MarkdownPane markdownText={this.state.markdownText} onChange={this.onMarkdownChange} />
-        </div>
-        <div className='PreviewPane' >
-          <PreviewPane fetchProcessedMarkdown={() => this.rawMarkup()} />
-        </div>
-
+        <MarkdownPane
+          className='MarkdownPane'
+          markdownText={this.state.markdownText}
+          onChange={this.onMarkdownChange}
+        />
+        <PreviewPane
+          className='PreviewPane'
+          fetchProcessedMarkdown={() => this.processedMarkdown()}
+        />
       </div>
     );
   }
