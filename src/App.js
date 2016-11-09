@@ -10,17 +10,22 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.onMarkdownChange = this.onMarkdownChange.bind(this);
+    this.rawMarkup = this.rawMarkup.bind(this);
     this.state = {
       markdownText: 'default input'
     }
   }
 
   onMarkdownChange(evt) {
-    console.log('event = ' + evt.target);
     const { value } = evt.target;
     this.setState({
       markdownText: value
     });
+  }
+
+  rawMarkup() {
+    var raw = this.state.markdownText;
+    return { __html: raw };
   }
 
   render() {
@@ -32,8 +37,8 @@ class App extends Component {
         <div className='MarkdownPane'>
           <MarkdownPane markdownText={this.state.markdownText} onChange={this.onMarkdownChange} />
         </div>
-        <div className='PreviewPane'>
-          <PreviewPane />
+        <div className='PreviewPane' >
+          <PreviewPane fetchProcessedMarkdown={() => this.rawMarkup()} />
         </div>
 
       </div>

@@ -10,7 +10,6 @@ class MarkdownPane extends Component {
           className="textentry"
           onChange={ this.props.onChange }
           value={this.props.markdownText}
-
          />
       </div>
     );
