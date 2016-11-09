@@ -8,7 +8,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Markdown Previewer</h1>
+        <div className="title">
+          <h1>Markdown Previewer</h1>
+        </div>
         <div className='MarkdownPane'>
           <MarkdownPane />
         </div>

@@ -4,8 +4,12 @@ import './PreviewPane.scss';
 class PreviewPane extends Component {
   render() {
     return (
-      <div className="PreviewPane">
-        <h2>This is the PreviewPane component</h2>
+      <div>
+        <h2>Markdown Preview</h2>
+        <div className="preview-container">
+          <div className="preview-pane">
+          </div>
+        </div>
       </div>
     );
   }
