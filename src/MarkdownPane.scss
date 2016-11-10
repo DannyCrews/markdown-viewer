@@ -1,12 +1,10 @@
-$bordercolor: #000;
-$shade: #5D5C5C;
 
 
 .container {
   display: flex;
   flex: 1;
   margin: 0 1em;
-  border: 1px solid $bordercolor;
+  border: 1px solid #000;
   width: 400px;
   height: 100%;
 }
