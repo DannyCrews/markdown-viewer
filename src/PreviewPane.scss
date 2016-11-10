@@ -2,15 +2,17 @@ $bordercolor: #000;
 $shade: #5D5C5C;
 
 
-.preview-container {
-  margin: 0 1em;
+.container {
   display: flex;
   flex: 1;
+  margin: 0 1em;
   border: 1px solid $bordercolor;
   width: 400px;
-  height: 100%;
+  height: 100vh;
 }
 
 .preview-pane {
+  flex: 1 50em;
+  flex-flow: column;
   padding: 10px;
 }

@@ -4,14 +4,18 @@ import './MarkdownPane.scss';
 class MarkdownPane extends Component {
   render() {
     return (
-      <div className="markdown-container">
-        <h2>Markdown Pane</h2>
-        <textarea
-          className="textentry"
-          onChange={ this.props.onChange }
-          value={this.props.markdownText}
-         />
-      </div>
+        <div className="container">
+          <div>
+            <h2>Markdown Pane</h2>
+          </div>
+          <div className="text-pane">
+            <textarea
+              className="text-area"
+              onChange={ this.props.onChange }
+              value={this.props.markdownText}
+             />
+          </div>
+        </div>
     );
   }
 }

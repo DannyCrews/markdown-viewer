@@ -1,14 +1,26 @@
+$bordercolor: #000;
+$shade: #5D5C5C;
+
+
 .container {
   display: flex;
   flex: 1;
   margin: 0 1em;
-}
-
-.textentry {
-  flex: 1 50em;
-  display: flex;
-  flex-flow: column;
-  padding: 15px;
+  border: 1px solid $bordercolor;
   width: 400px;
   height: 100%;
+}
+
+.text-pane {
+  flex: 1 50em;
+  flex-flow: column;
+  padding: 10px;
+  width: 100%;
+  height: 100vh;
+}
+
+.text-area {
+  flex: 1 50em;
+  height: 100%;
+  width: 100%;
 }
