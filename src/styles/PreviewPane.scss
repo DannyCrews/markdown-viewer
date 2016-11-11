@@ -1,5 +1,6 @@
 $border-color: #959E9E;
-$shade: #5D5C5C;
+$shade: #DDD;
+$title-color: white;
 
 .preview-container {
   display: flex;
@@ -10,14 +11,18 @@ $shade: #5D5C5C;
   .preview-title {
     flex: 1 10%;
     font-size: 1em;
+    color: $title-color;
+    font-style:italic;
+    padding-left: 5px;
     padding-right: 15px;
+
   }
 
   .preview-pane {
     flex: 1 50em;
     padding: 15px;
     margin-top: 15px;
-    background:rgba(255,255,255,0.5);
+    background:rgba(255,255,255,0.7);
     border: 1px solid $border-color;
     box-shadow: 0 0 20px $shade;
     flex: 1 80%;

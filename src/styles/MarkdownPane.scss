@@ -1,3 +1,5 @@
+$title-color: white;
+
 
 .markdown-container {
   display: flex;
@@ -8,6 +10,9 @@
   .markdown-title {
     flex: 1 10%;
     font-size: 1em;
+    color: $title-color;
+    font-style: italic;
+    padding-left: 5px;
   }
 
   .text-pane {
@@ -20,7 +25,7 @@
 
   .text-area {
     flex: 1 50vh;
-    background:rgba(255,255,255,0.5);
+    background:rgba(255,255,255,0.7);
   }
 
 }
