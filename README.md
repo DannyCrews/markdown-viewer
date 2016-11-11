@@ -1,3 +1,7 @@
+
+*This app can be viewed live at https://salty-inlet-80968.herokuapp.com/*
+
+
 ### Running the app
 
 1. Ensure you have `npm` installed.
