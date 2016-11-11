@@ -65,7 +65,7 @@ Spain.
     return (
       <div className="container">
         <div className="title">
-          <h1>Markdown Previewer</h1>
+          <h1> Live Markdown Previewer</h1>
         </div>
         <MarkdownPane
           className='MarkdownPane'
