@@ -1,16 +1,23 @@
+$border-color: #845E37;
+$shade: #5D5C5C;
 
-
-.container {
+.preview-container {
   display: flex;
   flex: 1;
   margin: 0 1em;
-  border: 1px solid #000;
-  width: 400px;
-  height: 100vh;
-}
 
-.preview-pane {
-  flex: 1 50em;
-  flex-flow: column;
-  padding: 10px;
+  .preview-title {
+    flex: 1 10%;
+    font-size: 1em;
+    padding-right: 15px;
+  }
+
+  .preview-pane {
+    flex: 1 50em;
+    padding: 15px;
+    margin-top: 15px;
+    border: 1px solid $border-color;
+    box-shadow: 0 0 20px $shade;
+    flex: 1 80%;
+    }
 }

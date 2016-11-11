@@ -1,17 +1,23 @@
 $titlefont: 'helvetica';
 
-.App {
+.container {
   display: flex;
   flex-flow: row wrap;
+
+  .title {
+    text-align: center;
+    font-family: $titlefont, sans-serif;
+    font-size: 1.5em;
+    text-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+    padding: 1px;
+    border: solid 1px black;
+    width: 100%;
+  }
 }
 
-.title {
-  font-family: $titlefont, sans-serif;
-  flex: 1 1000em;
-  font-size: 1.5em;
-  text-align: center;
-  text-shadow: 4px 4px 0 rgba(0,0,0,0.1);
-  padding: 1em;
-  margin-bottom: 1em;
-  border: 1px solid #000;
+
+body {
+  font-family: 'Open Sans', sans-serif;
 }
+
+

@@ -63,7 +63,7 @@ Spain.
 
   render() {
     return (
-      <div className="App">
+      <div className="container">
         <div className="title">
           <h1>Markdown Previewer</h1>
         </div>

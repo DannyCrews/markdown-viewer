@@ -4,15 +4,16 @@ import './PreviewPane.scss';
 class PreviewPane extends Component {
   render() {
     return (
-        <div className="container">
-          <div>
-            <h2>Markdown Preview</h2>
-          </div>
-          <div
-            className="preview-pane"
-            dangerouslySetInnerHTML={this.props.fetchProcessedMarkdown()}
-          ></div>
+      <div className="preview-container">
+        <div className="preview-title">
+          <h2>Markdown Preview</h2>
         </div>
+        <div
+          className="preview-pane"
+          dangerouslySetInnerHTML={this.props.fetchProcessedMarkdown()}
+        >
+        </div>
+      </div>
     );
   }
 }
