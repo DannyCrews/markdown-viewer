@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './MarkdownPane.scss';
+import './styles/MarkdownPane.scss';
 
 class MarkdownPane extends Component {
   render() {

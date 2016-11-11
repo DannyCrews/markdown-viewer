@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Marked from 'marked';
 import 'normalize.css';
-import './App.scss';
+import './styles/App.scss';
 import MarkdownPane from './MarkdownPane';
 import PreviewPane from './PreviewPane';
 

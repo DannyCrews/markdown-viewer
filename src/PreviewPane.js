@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './PreviewPane.scss';
+import './styles/PreviewPane.scss';
 
 class PreviewPane extends Component {
   render() {
